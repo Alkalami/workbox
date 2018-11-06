@@ -130,11 +130,11 @@ gulp.task('test-integration', async () => {
             await runIntegrationForBrowser(localBrowser);
           }
           break;
-        case 'safari':
-          if (localBrowser.getReleaseName() === 'stable') {
-            await runIntegrationForBrowser(localBrowser);
-          }
-          break;
+        // case 'safari':
+        //   if (localBrowser.getReleaseName() === 'stable') {
+        //     await runIntegrationForBrowser(localBrowser);
+        //   }
+        //   break;
         default:
           logHelper.warn(oneLine`
             Skipping integration tests for ${localBrowser.getPrettyName()}.
